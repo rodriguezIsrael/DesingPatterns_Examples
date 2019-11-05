@@ -3,11 +3,20 @@ package com.dp.examples.behavioral.chain_responsibility;
 import com.dp.examples.behavioral.chain_responsibility.dto.ServerInfoDTO;
 import com.dp.examples.behavioral.chain_responsibility.impl.Server;
 
+/**
+ * Clase de prueba patron de diseño, Cadena de responsabilidad
+ * 
+ * @since 05/11/2019
+ * @author isivroes
+ *
+ */
 public class ChainServer {
 
 	public AbstractServer doChainServers() {
 
-		// server one
+		/**
+		 * Creacion de la informacion del servidor uno
+		 */
 		ServerInfoDTO serverInfo01 = new ServerInfoDTO();
 
 		serverInfo01.setCapacity(10);
@@ -17,7 +26,9 @@ public class ChainServer {
 
 		AbstractServer server01 = new Server(serverInfo01);
 
-		// server two
+		/**
+		 * Creacion de la informacion del servidor Dos
+		 */
 		ServerInfoDTO serverInfo02 = new ServerInfoDTO();
 
 		serverInfo02.setCapacity(5);
@@ -27,7 +38,9 @@ public class ChainServer {
 
 		AbstractServer server02 = new Server(serverInfo02);
 
-		// server three
+		/**
+		 * Creacion de la informacion del servidor Tres
+		 */
 		ServerInfoDTO serverInfo03 = new ServerInfoDTO();
 
 		serverInfo03.setCapacity(15);
@@ -38,7 +51,7 @@ public class ChainServer {
 		AbstractServer server03 = new Server(serverInfo03);
 
 		/**
-		 * chain servers creation
+		 * Se crea cadena de responsabilidades
 		 */
 		server01.setNextServer(server02);
 		server02.setNextServer(server03);
