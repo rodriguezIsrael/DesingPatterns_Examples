@@ -1,17 +1,21 @@
 package com.dp.examples.behavioral.chain_responsibility.impl;
 
 import java.util.Random;
-import java.util.logging.Logger;
 
 import com.dp.examples.behavioral.chain_responsibility.AbstractServer;
 import com.dp.examples.behavioral.chain_responsibility.dto.ServerInfoDTO;
 
+/**
+ * Clase concreta del servidor
+ * 
+ * @since 05/11/2019
+ * @author isivroes
+ *
+ */
 public class Server extends AbstractServer {
 
-	private final static Logger LOGGER = Logger.getLogger(Server.class.getName());
-
 	/**
-	 * Instance of server info dto
+	 * Instancia del dto con información del servidor
 	 */
 	private ServerInfoDTO serverInfo;
 
@@ -25,6 +29,9 @@ public class Server extends AbstractServer {
 		this.serverInfo = serverInfo;
 	}
 
+	/**
+	 * Constructor default
+	 */
 	public Server() {
 
 	}
@@ -34,16 +41,19 @@ public class Server extends AbstractServer {
 	 */
 	@Override
 	protected void doConnection() {
-		LOGGER.info("Doing connection....");
+		System.out.println("Realizando conexión...");
 
 		System.out.println("---------------------------");
 		System.out.println("-- name: " + this.serverInfo.getName());
 		System.out.println("-- port: " + this.serverInfo.getPort());
 		System.out.println("-- ip: " + this.serverInfo.getIp());
-		LOGGER.info("---------------------------");
+		System.out.println("---------------------------");
 
 	}
 
+	/**
+	 * Se obtienen los usuarios conectados
+	 */
 	@Override
 	protected int getUsersConnected() {
 		Random random = new Random();
