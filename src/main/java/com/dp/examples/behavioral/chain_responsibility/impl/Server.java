@@ -57,8 +57,8 @@ public class Server extends AbstractServer {
 	@Override
 	protected int getUsersConnected() {
 		Random random = new Random();
-		int capacity = random.nextInt(this.serverInfo.getCapacity() + 1);
-		return capacity;
+		return random.nextInt(this.serverInfo.getCapacity() + 1);
+
 	}
 
 	/**
