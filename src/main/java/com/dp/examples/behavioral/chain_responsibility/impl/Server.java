@@ -20,10 +20,10 @@ public class Server extends AbstractServer {
 	private ServerInfoDTO serverInfo;
 
 	/**
-	 * Constructor that has to recive server info and the availability
+	 * Constructor que recibe la información del DTO.
 	 * 
-	 * @param serverInfo   - Info about the server
-	 * @param availability - availability of the server
+	 * @param serverInfo   - Información sobre el servidor
+	 * @param availability - Disponibilidad del servidor
 	 */
 	public Server(ServerInfoDTO serverInfo) {
 		this.serverInfo = serverInfo;
@@ -37,7 +37,7 @@ public class Server extends AbstractServer {
 	}
 
 	/**
-	 * Method overrided for do connection
+	 * Metodo sobre escrito para realizar la conexión.
 	 */
 	@Override
 	protected void doConnection() {

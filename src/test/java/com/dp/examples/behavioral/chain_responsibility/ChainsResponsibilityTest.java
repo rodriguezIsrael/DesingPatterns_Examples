@@ -5,12 +5,21 @@ import org.junit.jupiter.api.Test;
 import com.dp.examples.behavioral.chain_responsibility.dto.ServerInfoDTO;
 import com.dp.examples.behavioral.chain_responsibility.impl.Server;
 
+/**
+ * Clase de prueba patron de diseño, Cadena de responsabilidad
+ * 
+ * @since 05/11/2019
+ * @author isivroes
+ *
+ */
 public class ChainsResponsibilityTest {
 
 	@Test
 	public void chainResponsibilityTest() {
 
-		// server one
+		/**
+		 * Creacion de la informacion del servidor uno
+		 */
 		ServerInfoDTO serverInfo01 = new ServerInfoDTO();
 
 		serverInfo01.setCapacity(1);
@@ -20,7 +29,9 @@ public class ChainsResponsibilityTest {
 
 		Server server01 = new Server(serverInfo01);
 
-		// server two
+		/**
+		 * Creacion de la informacion del servidor Dos
+		 */
 		ServerInfoDTO serverInfo02 = new ServerInfoDTO();
 
 		serverInfo02.setCapacity(2);
@@ -30,7 +41,9 @@ public class ChainsResponsibilityTest {
 
 		Server server02 = new Server(serverInfo02);
 
-		// server three
+		/**
+		 * Creacion de la informacion del servidor Tres
+		 */
 		ServerInfoDTO serverInfo03 = new ServerInfoDTO();
 
 		serverInfo03.setCapacity(3);
@@ -52,7 +65,7 @@ public class ChainsResponsibilityTest {
 		AbstractServer abstractServer = new Server();
 
 		/**
-		 * chain servers creation
+		 * Se crea cadena de responsabilidades
 		 */
 		server01.setNextServer(server02);
 		server02.setNextServer(server03);
@@ -60,6 +73,9 @@ public class ChainsResponsibilityTest {
 
 		abstractServer.setNextServer(server01);
 
+		/**
+		 * Se ejecuta la cadena de responsabilidades
+		 */
 		abstractServer.checkAvailability();
 
 	}
