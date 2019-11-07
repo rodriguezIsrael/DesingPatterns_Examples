@@ -2,8 +2,9 @@ package com.dp.examples.behavioral.chain_responsibility;
 
 import org.junit.jupiter.api.Test;
 
-import com.dp.examples.behavioral.chain_responsibility.dto.ServerInfoDTO;
-import com.dp.examples.behavioral.chain_responsibility.impl.Server;
+import com.dp.examples.behavioral.chain_responsibility.example_01.AbstractServer;
+import com.dp.examples.behavioral.chain_responsibility.example_01.dto.ServerInfoDTO;
+import com.dp.examples.behavioral.chain_responsibility.example_01.impl.Server;
 
 /**
  * Clase de prueba patron de diseño, Cadena de responsabilidad
