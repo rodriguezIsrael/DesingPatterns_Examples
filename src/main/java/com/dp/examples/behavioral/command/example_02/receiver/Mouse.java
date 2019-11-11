@@ -87,12 +87,12 @@ public class Mouse {
 	 * @param selectedText
 	 */
 	public void setSelectedText(String selectedText) {
-		if (!on) {
+		if(!on) {
 			System.out.println("No se puede seleccionar texto debido a que el mouse esta apagado");
-		} else {
-			this.selectedText = selectedText;
+		}else {
+			this.selectedText = selectedText;	
 		}
-
+		
 	}
 
 }

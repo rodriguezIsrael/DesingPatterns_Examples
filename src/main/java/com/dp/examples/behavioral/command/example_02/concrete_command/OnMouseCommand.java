@@ -5,7 +5,7 @@ import com.dp.examples.behavioral.command.example_02.receiver.Mouse;
 
 public class OnMouseCommand implements Command {
 
-	Mouse mouse;
+	private Mouse mouse;
 
 	public OnMouseCommand(Mouse mouse) {
 		this.mouse = mouse;
