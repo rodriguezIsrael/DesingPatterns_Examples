@@ -13,7 +13,6 @@ public class OnMouseCommand implements Command {
 
 	@Override
 	public void execute() {
-
 		mouse.on();
 	}
 
